@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+a {
+  color: #12aaaa;
+}
+
+.header-container__color {
+  background-color: #fcf5fc;
+}
+
+.map-container {
+  text-align: center;
+}
+
+.map-container h2 {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.map-image {
+  width: 90vw;
+  height: 60vh;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .header-container {
+    padding: 4em 4em;
+    font-size: 0.75em;
+  }
+
+h1 {
+    top: 10px;
+  }
+
+  .map-container h2 {
+    font-size: 1.2em;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+}

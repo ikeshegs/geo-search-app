@@ -15,20 +15,18 @@
 .image {
   background-image: url('../images/index.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 250%;
+  background-size: 100% 100%;
 }
 
 .header-container {
+  height: 15vh;
   padding: 2em 5em;
 }
 
 .main-container {
+  height: 80vh;
   text-align: center;
   padding-top: 8em;
-}
-
-.main-container div {
-  margin: 0 19px;
 }
 
 a {
@@ -37,16 +35,23 @@ a {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+i {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: #12aaaa;
+  color: #fff;
+  padding: 0.9em;
+}
+
 input[type=text] {
   width: 30%;
   border: 2px solid #fff;
-  padding: 15px 30px;
+  padding: 9px 30px;
   margin: 8px 0;
   outline: none;
   background-color: #fff;
   color: #000;
   font-size: 16px;
-  border-radius: 20px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
@@ -58,7 +63,8 @@ input[type=text]:focus {
 button {
   width: 5em;
   height: 40px;
-  border-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   border-color: none;
   outline: none;
   background-color: #12aaaa;
@@ -77,6 +83,14 @@ button {
     font-size: 0.75em;
   }
 
+  i {
+    background-color: #fff;
+    color: #12aaaa;
+    width: 1.5em;
+    height: 1.2em;
+    text-align: center;
+  }
+
   input[type=text] {
     font-size: 0.75em;
     padding: 8px 15px;
@@ -84,8 +98,8 @@ button {
   }
 
   button {
-    width: 4em;
-    height: 2.3em;
+    width: 5em;
+    height: 3em;
     font-size: .9em;
     background-color: #fff;
     color: #12aaaa;
