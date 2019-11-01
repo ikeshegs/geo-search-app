@@ -10,6 +10,9 @@
   display: flex;
   flex-direction: column;
   align-content: space-between;
+}
+
+.image {
   background-image: url('../images/index.jpg');
   background-repeat: no-repeat;
   background-size: 100% 250%;
@@ -64,7 +67,7 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
-  .container {
+  .image {
     background-image: none;
     background-color: #12aaaa;
   }
