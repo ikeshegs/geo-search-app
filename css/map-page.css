@@ -34,7 +34,22 @@ a {
 }
 
 .map-details-container .details {
-  display: inline;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+}
+
+.details h5 {
+  margin: 0;
+  padding-right: 8px;
+}
+
+.details button {
+  border-radius: 5px;
+  font-size: 0.65em;
+  width: 35px;
+  height: 20px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
@@ -52,5 +67,10 @@ a {
     font-size: 1.2em;
     letter-spacing: 0.3em;
     text-transform: uppercase;
+  }
+
+  .details button {
+    background-color: #12aaaa;
+    color: #fff;
   }
 }
