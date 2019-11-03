@@ -15,6 +15,7 @@ a {
 }
 
 .map-container h2 {
+  font-family: 'Righteous', cursive;
   font-size: 2em;
   font-weight: 700;
   letter-spacing: 0.3em;
@@ -26,6 +27,16 @@ a {
   height: 60vh;
 }
 
+.map-details-container {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  margin: 0 15%;
+}
+
+.map-details-container .details {
+  display: inline;
+}
+
 @media only screen and (max-width: 600px) {
 
   .header-container {
@@ -33,7 +44,7 @@ a {
     font-size: 0.75em;
   }
 
-h1 {
+  h1 {
     top: 10px;
   }
 

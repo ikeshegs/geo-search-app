@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Righteous|Roboto&display=swap');
+
 *, 
 ::before,
 ::after {
@@ -32,7 +34,7 @@
 a {
   text-decoration: none;
   color: aliceblue;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lobster', cursive;
 }
 
 i {
