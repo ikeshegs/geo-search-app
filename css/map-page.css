@@ -28,12 +28,17 @@ a {
 }
 
 .map-details-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.details-container {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
   margin: 0 15%;
 }
 
-.map-details-container .details {
+.details-container .details {
   display: flex;
   flex-direction: row;
   height: 30px;
@@ -49,6 +54,17 @@ a {
   font-size: 0.65em;
   width: 35px;
   height: 20px;
+  cursor: pointer;
+}
+
+.share-button button {
+  color: #fff;
+  background-color: #1900ff;
+  border-radius: 5px;
+  width: 100px;
+  height: 20px;
+  font-size: 0.75em;
+  font-family: 'Roboto', sans-serif;
   cursor: pointer;
 }
 
