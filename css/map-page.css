@@ -35,13 +35,14 @@ a {
 .details-container {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
-  margin: 0 15%;
+  margin: 0 10%;
 }
 
 .details-container .details {
   display: flex;
   flex-direction: row;
   height: 30px;
+  width: 150px;
 }
 
 .details h5 {
@@ -68,7 +69,7 @@ a {
   cursor: pointer;
 }
 
-.landmarks-container {
+.landmarks-container, .postal-code {
   width: 500px;
   height: 300px;
   font-family: 'Roboto', sans-serif;
@@ -80,7 +81,6 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
-
   .header-container {
     padding: 4em 4em;
     font-size: 0.75em;
