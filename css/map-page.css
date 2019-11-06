@@ -68,6 +68,17 @@ a {
   cursor: pointer;
 }
 
+.landmarks-container {
+  width: 500px;
+  height: 300px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.landmarks-container img {
+  width: 100px;
+  height: 100px;
+}
+
 @media only screen and (max-width: 600px) {
 
   .header-container {
