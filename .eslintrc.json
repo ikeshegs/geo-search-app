@@ -8,6 +8,7 @@
         "no-console": "warn",
         "camelcase": "error",
         "object-curly-newline": "warn",
-        "object-curly-spacing": "warn"
+        "object-curly-spacing": "warn",
+        "no-undef": "off"
     }
 }
