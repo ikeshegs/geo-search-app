@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
   <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
@@ -16,11 +20,15 @@
     <h1><a href="#">Geo Search</a></h1>
   </header>
   <main class="main-container">
-    <form action="./map-details.html">
-      <i class="fas fa-search-location fa-lg"></i><input type="text" name="search" id="search" placeholder="Search Location..."></i>
+    <form id="search-form">
+      <i class="fas fa-search-location fa-lg"></i><input type="text" name="searchstr" id="search"
+        placeholder="Search Location..."></i>
       <button type="submit">Search</button>
     </form>
+    <div class="map-wrapper" id="map" style='width: 400px; height: 300px;'></div>
   </main>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
