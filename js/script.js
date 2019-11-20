@@ -1,9 +1,5 @@
 const searchForm = document.getElementById('search-form');
 
-// const reloadPage = () => {
-//   document.location.reload(true);
-// };
-
 const searchString = e => {
   e.preventDefault();
   // reloadPage();
@@ -12,14 +8,19 @@ const searchString = e => {
   const searchInput = document.getElementById('search').value;
   const content = document.getElementById('content');
 
-  const key = 'CJ2B3G3xKvIbl9uVsfyBAAXdGqAF5G2m';
+  // const key = 'CJ2B3G3xKvIbl9uVsfyBAAXdGqAF5G2m';
 
-  imageElement.setAttribute(
-    'src',
-    `https://www.mapquestapi.com/staticmap/v5/map?key=${key}&center=${searchInput}`,
-  );
-  imageElement.setAttribute('classname', 'map-image');
-  content.appendChild(imageElement);
+  const accessToken =
+    'pk.eyJ1IjoiaWtlc2hlZ3MiLCJhIjoiY2szNzh6bHJlMDE0djNnbzJqcHFsNDZjMCJ9.Ro91XJh2zaKi894mXTPoTw';
+
+  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${searchInput}.json?access_token=${accessToken}`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data.features[0].geometry.coordinates);
+    })
+    .catch();
 
   // reloadPage();
 };
