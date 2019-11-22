@@ -2,7 +2,7 @@ const searchForm = document.getElementById('search-form');
 
 const searchString = e => {
   e.preventDefault();
-  
+
   const searchInput = document.getElementById('search').value;
   const mapboxAccessToken =
     'pk.eyJ1IjoiaWtlc2hlZ3MiLCJhIjoiY2szNzh6bHJlMDE0djNnbzJqcHFsNDZjMCJ9.Ro91XJh2zaKi894mXTPoTw';
@@ -25,6 +25,11 @@ const searchString = e => {
           center: [coordinates.longitude, coordinates.latitude],
           zoom: 13,
         });
+
+        // Add Marker to map
+        const marker = new mapboxgl.Marker()
+          .setLngLat([coordinates.longitude, coordinates.latitude])
+          .addTo(map);
       }
     })
     .catch();
