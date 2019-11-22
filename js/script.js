@@ -32,7 +32,11 @@ const searchString = e => {
           .addTo(map);
       }
     })
-    .catch();
+    .catch(err => {
+      if (err) {
+        document.getElementById('map').innerHTML = 'Map could not be loaded';
+      }
+    });
 };
 
 const getWeather = e => {
@@ -47,14 +51,37 @@ const getWeather = e => {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
-      document.getElementById('temp').innerHTML = `Temperature: ${data.main.temp}`;
+      document.getElementById('temp').innerHTML = `Temperature: ${data.main.temp} K`;
       document.getElementById('humidity').innerHTML = `Humidity: ${data.main.humidity}`;
       document.getElementById('weather-condition').innerHTML = `Weather Condition: ${data.weather[0].main}`;
       document.getElementById('wind-speed').innerHTML = `Wind Speed: ${data.wind.speed}`;
     })
-    .catch()
+    .catch(err => {
+      if (err) {
+        const errorMessage = 'Could not get weather information';
+
+        document.getElementById('temp').innerHTML = errorMessage;
+        document.getElementById('humidity').innerHTML = errorMessage;
+        document.getElementById('weather-condition').innerHTML = errorMessage;
+        document.getElementById('wind-speed').innerHTML = errorMessage;
+      }
+    })
+};
+
+// The Unit of Value is Kelvin
+const convertToCelsius = (value) => {
+  const celsius = value - 273.15;
+  console.log(`${Math.round(celsius)} °C`)
 }
+
+// The Unit of Value is Kelvin
+const convertToFahrenheit = (value) => {
+  const fahrenheit = value * 1.8 - 459.67;
+  console.log(`${Math.round(fahrenheit)} °F`)
+}
+
+convertToCelsius(300);
+convertToFahrenheit(300);
 
 searchForm.addEventListener('submit', searchString);
 searchForm.addEventListener('submit', getWeather);
