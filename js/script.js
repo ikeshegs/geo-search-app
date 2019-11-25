@@ -69,11 +69,22 @@ const getWeather = e => {
     .then(response => response.json())
     .then(data => {
       temperatureInKelvin = data.main.temp;
-      // console.log(temperatureInKelvin)
+      
       document.getElementById('temp').innerHTML = `Temperature: ${data.main.temp} K`;
       document.getElementById('humidity').innerHTML = `Humidity: ${data.main.humidity}`;
       document.getElementById('weather-condition').innerHTML = `Weather Condition: ${data.weather[0].main}`;
       document.getElementById('wind-speed').innerHTML = `Wind Speed: ${data.wind.speed}`;
+      
+      const newButton = document.createElement('button');
+      newButton.setAttribute('class', 'toggle-temp');
+      newButton.setAttribute('class', 'temp-button')
+      newButton.setAttribute('id', 'change-temp');
+      newButton.setAttribute('type', 'submit');
+      newButton.innerHTML = '°C/°F';
+
+      document.querySelector('.temp-container').appendChild(newButton);
+
+      // '<button class="toggle-temp" id="change-temp" type="submit">°C/°F</button>';
     })
     .catch(err => {
       if (err) {
