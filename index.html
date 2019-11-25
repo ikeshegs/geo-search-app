@@ -15,21 +15,22 @@
   <title>Geo Search</title>
 </head>
 
-<body class="container image">
+<body class="container">
   <header class="header-container">
     <h1><a id="reload" href="#">Geo Search</a></h1>
   </header>
   <main class="main-container">
     <form id="search-form">
-      <i class="fas fa-search-location fa-lg"></i><input type="text" name="searchstr" id="search"
-        placeholder="Search Location..."></i>
-      <button type="submit">Search</button>
+      <input type="text" name="searchstr" id="search"
+        placeholder="Search Location...">
+      <button class="search-button" type="submit">Search</button>
     </form>
-    <div class="map-wrapper" id="map" style='width: 400px; height: 300px;'></div>
+    <div class="map-wrapper" id="map"></div>
     <div class="weather-details">
-      <p class="kelvin" id="temp"></p>
+      <div class="temp-container">
+        <p class="kelvin" id="temp"></p>
+      </div>
       <p id="wind-speed"></p>
-      <button class="toggle-temp" id="change-temp" type="submit">°C/°F</button>
       <p id="humidity"></p>
       <p id="weather-condition"></p>
     </div>
