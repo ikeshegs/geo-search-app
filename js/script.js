@@ -1,4 +1,21 @@
 const searchForm = document.getElementById('search-form');
+const celsiusButton = document.getElementById('celsius');
+const fahrenheitButton = document.getElementById('fahrenheit');
+
+const reloadPage = document.getElementById('reload');
+
+const changeTemperature = document.getElementById('change-temp');
+let temperatureInKelvin;
+
+// Automatically reload the page when click
+reloadPage.addEventListener('click', () => {
+  location.reload();
+})
+
+/*
+ * Uses the Users Search input to get the locations coordinates.
+ * Uses coordinates to get the map image
+*/
 
 const searchString = e => {
   e.preventDefault();
@@ -51,6 +68,8 @@ const getWeather = e => {
   fetch(url)
     .then(response => response.json())
     .then(data => {
+      temperatureInKelvin = data.main.temp;
+      // console.log(temperatureInKelvin)
       document.getElementById('temp').innerHTML = `Temperature: ${data.main.temp} K`;
       document.getElementById('humidity').innerHTML = `Humidity: ${data.main.humidity}`;
       document.getElementById('weather-condition').innerHTML = `Weather Condition: ${data.weather[0].main}`;
@@ -71,17 +90,40 @@ const getWeather = e => {
 // The Unit of Value is Kelvin
 const convertToCelsius = (value) => {
   const celsius = value - 273.15;
-  console.log(`${Math.round(celsius)} °C`)
+  document.getElementById('temp').innerHTML = `Temperature: ${Math.round(celsius)} °C`;
 }
 
 // The Unit of Value is Kelvin
 const convertToFahrenheit = (value) => {
   const fahrenheit = value * 1.8 - 459.67;
-  console.log(`${Math.round(fahrenheit)} °F`)
+  document.getElementById('temp').innerHTML = `Temperature: ${Math.round(fahrenheit)} °F`;
 }
 
-convertToCelsius(300);
-convertToFahrenheit(300);
+const toggleTemperature = () => {
+  // const btnContainer = document.querySelector('.btn-container');
+  // if (btnContainer.classList === 'fah') {
+  //   convertToFahrenheit(temperatureInKelvin);
+  // }
+
+  // if (celsiusButton.classList === 'cels') {
+  //   convertToCelsius(temperatureInKelvin);
+  // }
+  const tempId = document.querySelector('#temp');
+  console.log(tempId)
+  if (tempId.classList === 'kelvin') {
+    convertToFahrenheit(temperatureInKelvin);
+  } else {
+    tempId.classList.remove('kelvin');
+    convertToCelsius(temperatureInKelvin);
+  }
+
+  tempId.classList.toggle('kelvin');
+}
 
 searchForm.addEventListener('submit', searchString);
 searchForm.addEventListener('submit', getWeather);
+
+changeTemperature.addEventListener('submit', toggleTemperature);
+
+// celsiusButton.addEventListener('click', toggleTemperature);
+// fahrenheitButton.addEventListener('click', toggleTemperature);
