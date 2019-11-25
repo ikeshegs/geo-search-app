@@ -17,7 +17,7 @@
 
 <body class="container image">
   <header class="header-container">
-    <h1><a href="#">Geo Search</a></h1>
+    <h1><a id="reload" href="#">Geo Search</a></h1>
   </header>
   <main class="main-container">
     <form id="search-form">
@@ -27,8 +27,9 @@
     </form>
     <div class="map-wrapper" id="map" style='width: 400px; height: 300px;'></div>
     <div class="weather-details">
-      <p id="temp"></p>
+      <p class="kelvin" id="temp"></p>
       <p id="wind-speed"></p>
+      <button class="toggle-temp" id="change-temp" type="submit">°C/°F</button>
       <p id="humidity"></p>
       <p id="weather-condition"></p>
     </div>
@@ -38,3 +39,8 @@
 </body>
 
 </html>
+
+<!--<div class="btn-container">
+  <button class="toggle-temp cels" id="celsius" type="submit">°C</button>
+  <button class="toggle-temp fah" id="fahrenheit" type="submit">°F</button>
+</div>-->
