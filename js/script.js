@@ -84,6 +84,11 @@ const getWeather = e => {
 
       document.querySelector('.temp-container').appendChild(newButton);
 
+      const shareToFacebookButton = document.createElement('button');
+      shareToFacebookButton.setAttribute('class', 'share-to-facebook');
+      shareToFacebookButton.innerHTML = 'Share To Facebook';
+      document.querySelector('.share-post').appendChild(shareToFacebookButton);
+
       // '<button class="toggle-temp" id="change-temp" type="submit">°C/°F</button>';
     })
     .catch(err => {

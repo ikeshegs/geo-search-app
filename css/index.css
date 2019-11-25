@@ -86,6 +86,13 @@ button {
   text-align: left;
 }
 
+.share-to-facebook {
+  background-color: #0e0af5;
+  color: #fff;
+  border-color: #0e0af5;
+  outline: none;
+}
+
 @media only screen and (min-width: 500px) {
   .main-container {
     margin: 0 auto;
