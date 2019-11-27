@@ -78,12 +78,31 @@ button {
   border-radius: 10px;
   width: 400px;
   height: 300px;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.map-wrapper:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
 }
 
 .weather-details {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
   text-align: left;
+}
+
+.share-to-facebook {
+  background-color: #0e0af5;
+  color: #fff;
+  border-color: #0e0af5;
+  outline: none;
+  text-align: left;
+  border-radius: 5px;
+  left: 0;
 }
 
 @media only screen and (min-width: 500px) {
