@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
 
-  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>Geo Search</title>
 
-  <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-  <title>Geo Search</title>
-</head>
+    <meta
+      property="og:url"
+      content="https://ikeshegs.github.io/geo-search-app/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Geo Search App" />
+    <meta
+      property="og:description"
+      content="This app helps shows the map and weather details of your place of interest."
+    />
+    <meta
+      property="og:image"
+      content="https://www.your-domain.com/path/image.jpg"
+    />
+  </head>
 
-<body class="container">
-  <header class="header-container">
-    <h1><a id="reload" href="#">Geo Search</a></h1>
-  </header>
-  <main class="main-container">
-    <form id="search-form">
-      <input type="text" name="searchstr" id="search"
-        placeholder="Search Location...">
-      <button class="search-button" type="submit">Search</button>
-    </form>
-    <div class="map-wrapper" id="map"></div>
-    <div class="weather-details">
-      <div class="temp-container">
-        <p class="kelvin" id="temp"></p>
+  <body class="container">
+    <div id="fb-root"></div>
+    <header class="header-container">
+      <h1><a id="reload" href="#">Geo Search</a></h1>
+    </header>
+    <main class="main-container">
+      <form id="search-form">
+        <input
+          type="text"
+          name="searchstr"
+          id="search"
+          placeholder="Search Location..."
+        />
+        <button class="search-button" type="submit">Search</button>
+      </form>
+      <div class="map-wrapper" id="map"></div>
+      <div class="weather-details">
+        <div>
+          <div class="temp-container">
+            <p class="kelvin" id="temp"></p>
+          </div>
+          <p id="wind-speed"></p>
+          <p id="humidity"></p>
+          <p id="weather-condition"></p>
+        </div>
       </div>
-      <p id="wind-speed"></p>
-      <p id="humidity"></p>
-      <p id="weather-condition"></p>
-    </div>
-  </main>
+      <div id="share" class="share-post"></div>
+    </main>
 
-  <script src="./js/script.js"></script>
-</body>
-
+    <script src="./js/script.js"></script>
+  </body>
 </html>
-
-<!--<div class="btn-container">
-  <button class="toggle-temp cels" id="celsius" type="submit">°C</button>
-  <button class="toggle-temp fah" id="fahrenheit" type="submit">°F</button>
-</div>-->
