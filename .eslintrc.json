@@ -1,0 +1,14 @@
+{
+    "extends": ["airbnb", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": "warn",
+        "no-unused-vars": "warn",
+        "no-use-before-define": "error",
+        "no-console": "warn",
+        "camelcase": "error",
+        "object-curly-newline": "warn",
+        "object-curly-spacing": "warn",
+        "no-undef": "off"
+    }
+}
