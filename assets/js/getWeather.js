@@ -26,25 +26,6 @@ const getWeather = () => {
       document.getElementById(
         'wind-speed',
       ).innerHTML = `Wind Speed: ${data.wind.speed} m/s`;
-
-      // const celsiusButton = document.createElement('button');
-      // celsiusButton.setAttribute('class', 'toggle-temp');
-      // celsiusButton.setAttribute('class', 'temp-button');
-      // celsiusButton.setAttribute('id', 'celsius-button');
-      // celsiusButton.setAttribute('onclick', 'convertToCelsius');
-      // // tempChangeButton.setAttribute('type', 'submit');
-      // celsiusButton.innerHTML = '°C';
-
-      // const fahrenheitButton = document.createElement('button');
-      // fahrenheitButton.setAttribute('class', 'toggle-temp');
-      // fahrenheitButton.setAttribute('class', 'temp-button');
-      // fahrenheitButton.setAttribute('id', 'fahrenheit-button');
-      // fahrenheitButton.setAttribute('onclick', 'convertToFahrenheit');
-      // // tempChangeButton.setAttribute('type', 'submit');
-      // fahrenheitButton.innerHTML = '°F';
-
-      // document.querySelector('.temp-container').appendChild(celsiusButton);
-      // document.querySelector('.temp-container').appendChild(fahrenheitButton);
     })
     .catch(err => {
       if (err) {

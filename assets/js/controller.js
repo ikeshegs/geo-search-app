@@ -1,3 +1,7 @@
+document.getElementById('celsius-button').style.display = 'none';
+document.getElementById('fahrenheit-button').style.display = 'none';
+document.getElementById('s').style.display = 'none';
+
 const reloadPage = document.getElementById('logo');
 
 // Automatically reload the page when click
@@ -11,4 +15,8 @@ document.getElementById('search-btn').addEventListener('click', e => {
     window.alert('Please Input a valid Location');
     return false;
   }
+
+  document.getElementById('celsius-button').style.display = 'inline';
+  document.getElementById('fahrenheit-button').style.display = 'inline';
+  document.getElementById('s').style.display = 'block';
 });
