@@ -1,8 +1,6 @@
 const cusUrl = location.search.replace('?', '');
 
 const searchString = () => {
-  // e.preventDefault();
-
   const searchInput = cusUrl || document.getElementById('search').value;
   const mapboxAccessToken =
     'pk.eyJ1IjoiaWtlc2hlZ3MiLCJhIjoiY2szNzh6bHJlMDE0djNnbzJqcHFsNDZjMCJ9.Ro91XJh2zaKi894mXTPoTw';
@@ -39,4 +37,4 @@ const searchString = () => {
     });
 };
 
-export default searchString;
+document.getElementById('search-btn').addEventListener('click', searchString);

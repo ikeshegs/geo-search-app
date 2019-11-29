@@ -1,4 +1,5 @@
 let temperatureInKelvin;
+
 const changeTemperature = document.getElementById('change-temp');
 
 const getWeather = () => {
@@ -26,65 +27,32 @@ const getWeather = () => {
         'wind-speed',
       ).innerHTML = `Wind Speed: ${data.wind.speed} m/s`;
 
-      const tempChangeButton = document.createElement('button');
-      tempChangeButton.setAttribute('class', 'toggle-temp');
-      tempChangeButton.setAttribute('class', 'temp-button');
-      tempChangeButton.setAttribute('id', 'change-temp');
-      tempChangeButton.setAttribute('onclick', 'toggleTemperature');
-      // tempChangeButton.setAttribute('type', 'submit');
-      tempChangeButton.innerHTML = '°C/°F';
+      // const celsiusButton = document.createElement('button');
+      // celsiusButton.setAttribute('class', 'toggle-temp');
+      // celsiusButton.setAttribute('class', 'temp-button');
+      // celsiusButton.setAttribute('id', 'celsius-button');
+      // celsiusButton.setAttribute('onclick', 'convertToCelsius');
+      // // tempChangeButton.setAttribute('type', 'submit');
+      // celsiusButton.innerHTML = '°C';
 
-      document.querySelector('.temp-container').appendChild(tempChangeButton);
+      // const fahrenheitButton = document.createElement('button');
+      // fahrenheitButton.setAttribute('class', 'toggle-temp');
+      // fahrenheitButton.setAttribute('class', 'temp-button');
+      // fahrenheitButton.setAttribute('id', 'fahrenheit-button');
+      // fahrenheitButton.setAttribute('onclick', 'convertToFahrenheit');
+      // // tempChangeButton.setAttribute('type', 'submit');
+      // fahrenheitButton.innerHTML = '°F';
+
+      // document.querySelector('.temp-container').appendChild(celsiusButton);
+      // document.querySelector('.temp-container').appendChild(fahrenheitButton);
     })
     .catch(err => {
       if (err) {
         const errorMessage = 'Could not get weather information';
 
         document.getElementById('temp').innerHTML = errorMessage;
-        document.getElementById('humidity').innerHTML = errorMessage;
-        document.getElementById('weather-condition').innerHTML = errorMessage;
-        document.getElementById('wind-speed').innerHTML = errorMessage;
       }
     });
 };
 
-// The Unit of Value is Kelvin
-const convertToCelsius = value => {
-  const celsius = value - 273.15;
-  document.getElementById('temp').innerHTML = `Temperature: ${Math.round(
-    celsius,
-  )} °C`;
-};
-
-// The Unit of Value is Kelvin
-const convertToFahrenheit = value => {
-  const fahrenheit = value * 1.8 - 459.67;
-  document.getElementById('temp').innerHTML = `Temperature: ${Math.round(
-    fahrenheit,
-  )} °F`;
-};
-
-const toggleTemperature = () => {
-  const tempContainer = document.querySelector('.temp-container');
-  const temp = document.getElementById('temp');
-
-  if (temp.classList === 'kelvin') {
-    convertToFahrenheit(temperatureInKelvin);
-  }
-
-  if (temp.classList === 'fahrenheit') {
-    convertToCelsius(temperatureInKelvin);
-  }
-  // const tempId = document.querySelector('#temp');
-  // console.log(tempId)
-  // if (tempId.classList === 'kelvin') {
-  //   convertToFahrenheit(temperatureInKelvin);
-  // } else {
-  //   tempId.classList.remove('kelvin');
-  //   convertToCelsius(temperatureInKelvin);
-  // }
-
-  // tempId.classList.toggle('kelvin');
-};
-
-export default getWeather;
+document.getElementById('search-btn').addEventListener('click', getWeather);
