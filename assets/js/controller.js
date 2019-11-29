@@ -1,7 +1,6 @@
-import searchInput from './searchInput.js';
-import getWeather from './getWeather.js';
-
-// const cusUrl = location.search.replace('?', '');
+document.getElementById('celsius-button').style.display = 'none';
+document.getElementById('fahrenheit-button').style.display = 'none';
+document.getElementById('s').style.display = 'none';
 
 const reloadPage = document.getElementById('logo');
 
@@ -16,21 +15,8 @@ document.getElementById('search-btn').addEventListener('click', e => {
     window.alert('Please Input a valid Location');
     return false;
   }
-  console.log(document.getElementById('search').value);
-  // location.assign(`/?${document.getElementById('search').value}`);
+
+  document.getElementById('celsius-button').style.display = 'inline';
+  document.getElementById('fahrenheit-button').style.display = 'inline';
+  document.getElementById('s').style.display = 'block';
 });
-
-document.getElementById('search-btn').addEventListener('click', e => {
-  e.preventDefault();
-
-  if (location.search) {
-    searchInput();
-    getWeather();
-  }
-  console.log(location.search.replace('?', ''));
-});
-
-console.log(location.href)
-
-// searchForm.addEventListener('submit', searchInput);
-// searchForm.addEventListener('submit', getWeather);

@@ -39,8 +39,10 @@
     <div class="map-wrapper" id="map"></div>
     <div class="weather-details">
       <div>
-        <div class="temp-container">
+        <div id="cf" class="temp-container">
           <p class="kelvin" id="temp"></p>
+          <button class="temp-button" id="fahrenheit-button" >°F</button>
+          <button class="temp-button" id="celsius-button" >°C</button>
         </div>
         <p id="wind-speed"></p>
         <p id="humidity"></p>
@@ -58,9 +60,10 @@
   </main>
 
   <script type="module" src="./assets/js/controller.js"></script>
+  <script src="./assets/js/searchInput.js"></script>
+  <script src="./assets/js/getWeather.js"></script>
+  <script src="./assets/js/changeTemperatureValue.js"></script>
   <script src="./assets/js/shareToFacebook.js"></script>
-  <!-- <script type="module" src="./assets/js/searchInput.js"></script>
-  <script type="module" src="./assets/js/getWeather.js"></script> -->
 </body>
 
 </html>
