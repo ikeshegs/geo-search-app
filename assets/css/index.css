@@ -78,15 +78,6 @@ button {
   border-radius: 10px;
   width: 400px;
   height: 300px;
-  cursor: grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab;
-}
-
-.map-wrapper:active {
-  cursor: grabbing;
-  cursor: -moz-grabbing;
-  cursor: -webkit-grabbing;
 }
 
 .weather-details {
