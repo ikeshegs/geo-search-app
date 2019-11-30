@@ -7,7 +7,7 @@ const getWeather = () => {
 
   const openWeatherId = '227cf83c61fac1850fb651932dcec580';
 
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=${openWeatherId}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=${openWeatherId}`;
 
   fetch(url)
     .then(response => response.json())

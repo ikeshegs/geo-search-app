@@ -1,6 +1,6 @@
 document.getElementById('celsius-button').style.display = 'none';
 document.getElementById('fahrenheit-button').style.display = 'none';
-document.getElementById('s').style.display = 'none';
+document.getElementById('share').style.display = 'none';
 
 const reloadPage = document.getElementById('logo');
 
@@ -18,5 +18,5 @@ document.getElementById('search-btn').addEventListener('click', e => {
 
   document.getElementById('celsius-button').style.display = 'inline';
   document.getElementById('fahrenheit-button').style.display = 'inline';
-  document.getElementById('s').style.display = 'block';
+  document.getElementById('share').style.display = 'flex';
 });
