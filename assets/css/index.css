@@ -83,7 +83,7 @@ button {
 .weather-details {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
-  text-align: left;
+  text-align: center;
 }
 
 .share-to-facebook {
